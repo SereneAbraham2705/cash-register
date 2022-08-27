@@ -1,5 +1,23 @@
+body{
+    text-align: center;
+    background-image: url('../img/plain.jpg');
+    background-position: center;
+    
+}
 .container{
     display:flex;
     flex-direction: column;
     width:50vw;
+}
+.heading{
+    border:3px double black;
+}
+#check-btn{
+    background-color: black;
+    color: bisque;
+    padding:1rem 0rem;
+}
+#msg-here{
+    color:red;
+    font-size: large;
 }
