@@ -6,14 +6,18 @@ const noofnotes=document.querySelectorAll(".output-box");
 
 const availableNotes=[2000,500,100,20,10,5,1];
 function validateBillAndCashAmount(){
+    calculatenotes(0);
+    var bill=Number(billamount.value);
+    var cash=Number(cashgiven.value);
     message.style.display="none";
-    if(billamount.value>0){
-        if(cashgiven.value>=billamount.value){
-            const amounttobereturned=cashgiven.value-billamount.value;
-            calculatenotes(amounttobereturned);
+    if(bill>0){
+        if(cash<bill){
+            showMessage("The cash given should be atleast equal to bill amount");
         }
         else{
-            showMessage("The cash given should be atleast equal to bill amount");
+           
+            const amounttobereturned=cash-bill;
+            calculatenotes(amounttobereturned);
         }
 
     }
